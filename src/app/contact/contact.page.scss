@@ -1,0 +1,68 @@
+.grid {
+  // border: 1px solid red;
+  padding-top: 20vw;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+  // align-items: center;
+}
+
+.row {
+  // border: 1px solid red;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 5%;
+}
+
+.col {
+  // border: 1px solid red;
+  border-radius: 50%;
+  // background: #9f9f9f;
+  background: #24282c;
+  width: 20vw;
+  height: 20vw;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fa-brands,
+.fa-solid {
+  font-size: 10vw;
+}
+.fa-phone {
+  color: #29c467;
+}
+.fa-envelope {
+  color: #ffffff;
+}
+.fa-youtube {
+  color: #ff0000;
+}
+.fa-facebook-f {
+  color: #1877f2;
+}
+.fa-instagram {
+  color: #d902d8;
+}
+.fa-twitter {
+  color: #1d9bf0;
+}
+.fa-twitch {
+  color: #9147ff;
+}
+.fa-snapchat {
+  color: #fffc00;
+}
+
+// i{
+//     border: 1px solid red;
+//     border-radius: 50%;
+//     text-align: center;
+//     width: 40vw;
+//     height: 40vw;
+//     margin: 2%;
+//     padding: 10%;
+// }

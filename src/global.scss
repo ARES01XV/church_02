@@ -24,3 +24,17 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+/* Imported Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+// *{
+//     padding: 0;
+//     margin: 0;
+//     box-sizing: border-box;
+// }
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    // background: #f4f5f8;
+}

@@ -1,0 +1,55 @@
+<script src="https://www.paypal.com/sdk/js?client-id=AS2oL8vSsEypjOCloKs2jHQ_THIN7OXHbdmDhYLlO4qwD88dJzDj70dIri36R2Y6YqWKkjbclPojd4TM"></script>
+
+<ion-header [translucent]="true">
+  <ion-toolbar class="toolbar">
+    <ion-title> </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-text>
+    <p>
+      "No one has ever become poor <br />
+      by giving." - <b>Anne Frank</b>
+    </p>
+  </ion-text>
+
+  <ion-text><h1>Input amount</h1></ion-text>
+  <ion-input type="number"></ion-input>
+
+  <!-- <div id="paypal"></div> -->
+  <ion-button expand="full" size="large" color="dark" strong="true"
+    >Donate</ion-button
+  >
+</ion-content>
+
+<!-- Paypal Script------------------------------- -->
+<script>
+  paypal
+    .Buttons({
+      createOrder: function (data, actions) {
+        return actions.order.create({
+          purchase_units: [
+            {
+              amount: {
+                value: "0.01",
+              },
+            },
+          ],
+        });
+      },
+      onApprove: function (data, actions) {
+        return actions.order.capture().then(function (details) {
+          alert("Transaction completed by " + details.payer.name.given_name);
+        });
+      },
+      style: {
+        layout: "vertical",
+        paypal_color: "blue",
+        paypal_credit_color: "red",
+        shape: "rect",
+        label: "paypal",
+      },
+    })
+    .render("#paypal");
+</script>

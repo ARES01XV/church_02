@@ -1,3 +1,50 @@
+<!-- HEADER---------------------------------------- -->
+<ion-header [translucent]="true">
+  <ion-toolbar class="toolbar">
+    <ion-title>
+      <i class="fa-solid fa-place-of-worship"></i>
+      Iglesia
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!-- OUTLET---------------------------------------- -->
 <ion-app>
   <ion-router-outlet></ion-router-outlet>
 </ion-app>
+
+<!-- FOOTER?---------------------------------------- -->
+<ion-tabs>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="donate" routerLink="/give">
+      <i class="fa-solid fa-hand-holding-heart"></i>
+      <!-- <ion-icon name="heart-outline"></ion-icon> -->
+      <ion-label>Donate</ion-label>
+      <!-- <ion-badge>6</ion-badge> -->
+    </ion-tab-button>
+
+    <ion-tab-button tab="sermon" routerLink="/sermon">
+      <i class="fa-solid fa-microphone-lines"></i>
+      <!-- <ion-icon name="person-circle"></ion-icon> -->
+      <ion-label>Sermons</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="home" routerLink="/home">
+      <i class="fa-solid fa-house"></i>
+      <!-- <ion-icon name="person-circle"></ion-icon> -->
+      <ion-label>Home</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="prayer" routerLink="/prayer">
+      <i class="fa-solid fa-person-praying"></i>
+      <!-- <ion-icon name="map"></ion-icon> -->
+      <ion-label>Prayer</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="about" routerLink="/contact">
+      <i class="fa-solid fa-satellite-dish"></i>
+      <!-- <ion-icon name="information-circle"></ion-icon> -->
+      <ion-label>Contact</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>

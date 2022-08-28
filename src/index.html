@@ -1,26 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Ionic App</title>
 
-<head>
-  <meta charset="utf-8" />
-  <title>Ionic App</title>
+    <base href="/" />
 
-  <base href="/" />
+    <meta name="color-scheme" content="light dark" />
+    <meta
+      name="viewport"
+      content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
 
-  <meta name="color-scheme" content="light dark" />
-  <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <meta name="format-detection" content="telephone=no" />
-  <meta name="msapplication-tap-highlight" content="no" />
+    <link rel="icon" type="image/png" href="assets/icon/favicon.png" />
 
-  <link rel="icon" type="image/png" href="assets/icon/favicon.png" />
+    <!-- links---------------------------------------------------- -->
+    <script
+      src="https://kit.fontawesome.com/b7a2ac83f3.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://www.paypal.com/sdk/js?client-id=AS2oL8vSsEypjOCloKs2jHQ_THIN7OXHbdmDhYLlO4qwD88dJzDj70dIri36R2Y6YqWKkjbclPojd4TM"></script>
 
-  <!-- add to homescreen for ios -->
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-</head>
+    <!-- add to homescreen for ios -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  </head>
 
-<body>
-  <app-root></app-root>
-</body>
+  <body>
+    <app-root></app-root>
+  </body>
+
+  <!-- Paypal Script------------------------------- -->
+<script>
+  paypal
+    .Buttons({
+      createOrder: function (data, actions) {
+        return actions.order.create({
+          purchase_units: [
+            {
+              amount: {
+                value: "0.01",
+              },
+            },
+          ],
+        });
+      },
+      onApprove: function (data, actions) {
+        return actions.order.capture().then(function (details) {
+          alert("Transaction completed by " + details.payer.name.given_name);
+        });
+      },
+      style: {
+        layout: "vertical",
+        paypal_color: "blue",
+        paypal_credit_color: "red",
+        shape: "rect",
+        label: "paypal",
+      },
+    })
+    .render("#paypal");
+</script>
 
 </html>
