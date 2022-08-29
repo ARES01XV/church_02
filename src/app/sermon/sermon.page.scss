@@ -1,8 +1,19 @@
+ion-grid{
+  padding: 0;
+}
+
 ion-row {
   display: flex;
+  padding: 0;
 }
 
 ion-col {
   // border: 1px solid red;
-  width: 100vw;
+  padding: 0 0 5% 0;
+}
+
+iframe{
+  width: 100%;
+  height: 30vh;
+  padding: 0;
 }

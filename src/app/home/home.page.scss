@@ -1,14 +1,19 @@
-ion-content {
-  // border: 1px solid red;
-  padding: 0%;
+ion-grid {
+  padding: 0;
 }
 
-.flex {
+ion-row {
+  display: flex;
+  padding: 0;
+}
+
+ion-col {
+  // border: 1px solid red;
+  padding: 0;
   position: relative;
 }
-.flex > ion-img {
-  // border: 1px solid red;
-  width: 99%;
+
+ion-img {
   filter: brightness(50%);
 }
 
@@ -18,6 +23,7 @@ h1 {
   left: 50%;
   transform: translateX(-50%);
   font-size: 10vw;
+  font-weight: bold;
   text-align: center;
   color: whitesmoke;
 }
